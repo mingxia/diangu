@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "diangu",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-08-13",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "d1_databases": [{ "binding": "DB", "database_name": "diangu", "database_id": "YOUR_D1_DATABASE_ID", "migrations_dir": "src/db/migrations" }]
+}

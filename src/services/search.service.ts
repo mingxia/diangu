@@ -1,0 +1,1 @@
+import { searchPublished } from "@/db/queries/allusion";import { normalizeQuery } from "@/lib/search";export async function searchAllusions(input:string){const query=normalizeQuery(input);return query?searchPublished(query):[];}

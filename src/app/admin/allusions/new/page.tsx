@@ -1,0 +1,1 @@
+import { requireAdmin } from "@/lib/auth";import { AllusionForm } from "@/components/admin/allusion-form";export default async function New(){await requireAdmin();return <section className="admin"><h1>新建典故</h1><AllusionForm/></section>}

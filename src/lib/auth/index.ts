@@ -1,0 +1,3 @@
+import { betterAuth } from "better-auth";import { drizzleAdapter } from "better-auth/adapters/drizzle";import { headers } from "next/headers";import { redirect } from "next/navigation";import { getDb } from "@/db";
+export const auth=betterAuth({database:drizzleAdapter(getDb(),{provider:"sqlite"}),emailAndPassword:{enabled:true,disableSignUp:true}});
+export async function requireAdmin(){const session=await auth.api.getSession({headers:await headers()});const allowed=(process.env.ADMIN_EMAILS??"").split(",").map(x=>x.trim().toLowerCase()).filter(Boolean);if(!session?.user.email||!allowed.includes(session.user.email.toLowerCase()))redirect("/admin/login");return session;}

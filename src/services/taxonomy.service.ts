@@ -1,0 +1,1 @@
+import { asc } from "drizzle-orm";import { getDb } from "@/db";import { scenarios } from "@/db/schema";export const listScenarios=()=>getDb().select().from(scenarios).orderBy(asc(scenarios.sortOrder)).limit(12);
