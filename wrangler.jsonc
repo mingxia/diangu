@@ -5,5 +5,5 @@
   "compatibility_date": "2025-08-13",
   "compatibility_flags": ["nodejs_compat"],
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
-  "d1_databases": [{ "binding": "DB", "database_name": "diangu", "database_id": "YOUR_D1_DATABASE_ID", "migrations_dir": "src/db/migrations" }]
+  "d1_databases": [{ "binding": "DB", "database_name": "diangu", "database_id": "d9e313f8-1bbc-4c23-a3eb-f9b9061356ab", "migrations_dir": "src/db/migrations" }]
 }
