@@ -1,0 +1,1 @@
+export function generateAllusionSlug(pinyin:string,suffix?:number){const base=pinyin.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");if(!base)throw new Error("拼音无法生成 slug");return suffix&&suffix>1?`${base}-${suffix}`:base;}

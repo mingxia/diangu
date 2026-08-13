@@ -1,0 +1,1 @@
+import {describe,expect,it} from "vitest";import {generateAllusionSlug} from ".";describe("slug",()=>{it("removes tones and resolves suffixes",()=>expect(generateAllusionSlug("dōng shān zài qǐ",2)).toBe("dong-shan-zai-qi-2"))});
